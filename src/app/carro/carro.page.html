@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      <ion-icon name="cart-outline"></ion-icon>
+      <ion-label>Carro:Cap Shopping</ion-label>
+    </ion-title>
+    <ion-buttons slot="start" >
+      <ion-back-button defaultHref="/home" ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Carro de Compra</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+          <ion-list>
+            <ion-item>
+              <ion-label slot="start">Lavadora</ion-label>
+              <ion-chip color="secondary">
+                 <ion-label>$200000</ion-label>
+              </ion-chip>
+            </ion-item>
+            <ion-item>
+              <ion-label slot="start">Assassin's Creed</ion-label>
+              <ion-chip color="primary">
+                <ion-label>$30000</ion-label>
+              </ion-chip>
+            </ion-item>
+            <ion-item>
+              <ion-label slot="start">Lapicera Pentel</ion-label>
+              <ion-chip color="tertiary">
+                 <ion-label>$20000</ion-label>
+              </ion-chip>
+            </ion-item>
+            <ion-item>
+              <ion-label slot="start">Television LG</ion-label>
+              <ion-chip color="secondary">
+                 <ion-label>$350000</ion-label>
+              </ion-chip>
+            </ion-item>
+            <ion-item class="ion-margin-top ion-padding">
+              <ion-label color="danger">Total: $600000</ion-label>
+            </ion-item>
+            <ion-item class="ion-padding">
+              <ion-label>Fecha de Entrega</ion-label>
+              <ion-datetime></ion-datetime>
+            </ion-item>
+            <ion-item class="ion-padding">
+              <ion-label>Medio de Pago</ion-label>
+              <ion-select>
+                <ion-select-option>Efectivo contra Entrega</ion-select-option>
+                <ion-select-option>Tarjeta contra entrega</ion-select-option>
+                <ion-select-option>Tarjeta</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-item>
+              <ion-button (click)="pagar()" color="primary" size="large">PAGAR</ion-button>
+            </ion-item>
+          </ion-list>
+      </ion-card-content>
+    </ion-card>
+</ion-content>
